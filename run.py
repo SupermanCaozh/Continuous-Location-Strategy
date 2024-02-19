@@ -51,10 +51,7 @@ def compare_cord(x1, x2, eps):
     :param x2:
     :return:
     """
-    # eps = 0.001
-    # if abs(x1[0] - x2[0]) > eps or abs(x1[1] - x2[1]) > eps:
     if abs(x1[0] - x2[0]) < eps and abs(x1[1] - x2[1]) < eps:
-        # if x1[0] == x2[0] and x1[1] == x2[1]:
         return True
     else:
         return False
@@ -67,14 +64,7 @@ def stop_criteria(old, new, num_cluster):
     :param new:本轮重心
     :return:
     """
-    # old = np.array(old)
-    # new = np.array(new)
-    # ds = np.array([cal_dis(old[i], new[i]) for i in range(len(old))])
     eps = 0.000001  # 绝对精度
-    # if ds.any() > eps:
-    #     return False
-    # else:
-    #     return True
     n_match = 0
     for n in new:
         for i in range(len(old)):
@@ -181,18 +171,7 @@ colors = ["purple", "green", "blue", "pink", "brown", "red",
           "light green", "magenta", "yellow"]
 
 
-# DBscan
-# dbscan = DBSCAN(eps=1.414, min_samples=5)
-# dbscan.fit(regions_cord)
-# labels = dbscan.labels_
-
 def main(num_cluster):
-    # Kmeans,结果不稳定
-    # num_cluster = 3
-    # kmeans = KMeans(n_clusters=num_cluster)
-    # kmeans.fit(regions_cord)
-    # labels = kmeans.labels_
-    # print(labels)
 
     # 层次聚类法
     model = AgglomerativeClustering(n_clusters=num_cluster)
@@ -358,5 +337,3 @@ if __name__ == "__main__":
         data.loc[i, "cost_trl"] = cost_trl
         data.loc[i, "cost_trl_each"] = cost_trl_each
         data.loc[i, "cost_trl_ave"] = cost_trl_ave
-
-    # data.to_excel(r"data_gravity.xlsx", sheet_name="层次聚类指定聚类数", header=True, index=True)
