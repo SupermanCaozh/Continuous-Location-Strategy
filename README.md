@@ -5,7 +5,9 @@ An automatic location algorithm based on swarm intelligence algorithm has been p
 ## Highlights of this work
 1. We design a novel objective function for general location problems which takes both of the branch operation costs and residents’ travel costs into consideration simultaneously.
 2. A comprehensive location strategy which combines hierarchical clustering and multi gravities methods.
-3. A swarm intelligence-based continuous location algorithm is proposed and shows outstanding results.
+3. A swarm intelligence-based continuous location algorithm is proposed and shows outstanding results. A figure of solution representation is followed below.
+![solution](https://github.com/SupermanCaozh/Continuous-Location-Strategy/assets/96049887/688e238f-143a-41e8-8144-f1aaacf2fab3)
+
 
 The *heuristic.py* contains the swarm intelligence-based location algorithm. The *present_cost.py* contains the novel objective function proposed. The *run.py* implements the innovated strategies and outputs the simulation results with hyper-parameters given in the case in [1].
 
