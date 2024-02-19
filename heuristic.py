@@ -141,7 +141,6 @@ def optimizer(num):
                 delta_cost = cost
 
         # 更新重心
-        # std = 1 - (iter + 1) / Max_iter
         std = np.exp(-100 * (iter + 1) / Max_iter)
         error = np.random.normal(0, std, np.shape(alpha_pos))
         prey_pos = 0.5 * alpha_pos + 0.3 * beta_pos + 0.2 * delta_pos + error
@@ -188,7 +187,6 @@ def record(target_dir, file_name, sheet_name, data, col_names):
                     index=False)
 
     book = load_workbook(file)
-    # df = pd.DataFrame(data)
     df = data
 
     if sheet_name in book.sheetnames:
@@ -209,18 +207,12 @@ def record(target_dir, file_name, sheet_name, data, col_names):
         writer.save()
         writer.close()
 
-
-# best_layout, min_cost, (
-#     min_cost_opr, min_cost_trl), cost_convergence, cost_opr_convergence, cost_trl_convergence = optimizer()
-
 target_dir = r"C:\Users\caoze\Downloads\研究生课件\供应链"
 file_name = "data"
 
 # 讨论开设不同数量的管理局时,总成本及其构成情况
-# nums_cluster = np.arange(1, 11)
 nums_cluster = [10]
-# num_runs = 5
-num_runs = 1
+num_runs = 1 # 根据具体情况自定义
 
 for num in nums_cluster:
     col_names = ["nodes", "minimum total cost", "minimum operation cost", "minimum travelling cost", "region clusters"]
