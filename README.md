@@ -11,3 +11,6 @@ The *heuristic.py* contains the swarm intelligence-based location algorithm. The
 
 ## References
 [1] Ballou, Ronald H. "Business Logistics Managelnent." (1992).
+
+## Contact
+Please contact me through caozh516@gmail.com to ask for the completed report if needed.
