@@ -1,6 +1,6 @@
 # Continuous-Location-Strategy
 A Static Continuous Location Strategy based on Multi Intelligent Agent-Optimization Algorithm
-An automatic location algorithm based on swarm intelligence algorithm has been proposed to tackle the location problem in a continuous real space and is validated on a case give in [1]. 
+An automatic location algorithm based on swarm intelligence algorithm has been proposed to tackle the location problem in a continuous real space and is validated on a case give by [1]. 
 
 ## Highlights of this work
 1. We design a novel objective function for general location problems which takes both of the branch operation costs and residents’ travel costs into consideration simultaneously.
